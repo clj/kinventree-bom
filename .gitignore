@@ -1,0 +1,4 @@
+src/inventree_bom/vendored
+__pycache__/
+env/
+*.egg-info/

@@ -1,0 +1,27 @@
+[tool.vendoring]
+destination = "src/inventree_bom/vendored/"
+requirements = "vendor.txt"
+namespace = "inventree_bom.vendored"
+
+[tool.vendoring.transformations]
+substitute = [
+  # InvenTree
+  { match='import inventree\.(base|part|order|company|stock|build|api|label)', replace='from inventree import \1' },
+  { match='inventree\.(base|part|order|company|stock|build|api|label)\.', replace='\1.' },
+  # Natsort
+  { match='import natsort\.compat\.locale', replace='from natsort import compat' },
+  { match='(?<!from )natsort\.compat\.locale', replace='compat.locale' },
+]
+drop = [
+	"scripts/",
+	"test/",
+	"bin/",
+]
+
+[tool.ruff]
+select = ["E", "F", "I"]
+
+[tool.ruff.isort]
+force-single-line = true
+relative-imports-order = "closest-to-furthest"
+known-first-party = ["inventree_bom"]
