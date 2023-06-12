@@ -24,3 +24,12 @@ A KiCad plugin to push BOM information to InvenTree.
 >     vendoring sync
 >     deactivate
 >
+
+## Setting the PCB and PCA IPNs
+
+These can be typed in the dialog box on every run, selected from a dropdown when the `pca_category`/`pcb_category` are correctly configured, or they can be embedded in the *Title Block* (File -> Page Settings...):
+
+Add the following to one of the fields in the *Title Block*:
+
+* `PCB IPN: xxxxxx`
+* `PCA IPN: xxxxxx`
