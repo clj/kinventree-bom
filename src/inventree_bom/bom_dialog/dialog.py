@@ -194,7 +194,7 @@ class BomDialog(BomDialogBase):
         for change in self.changed:
             change.execute(self.api)
 
-    def sendButtonOnCClick(self, event):
+    def sendButtonOnClick(self, event):
         self.save()
 
     def closeButtonOnClick(self, event):
