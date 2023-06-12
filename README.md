@@ -11,3 +11,16 @@ A KiCad plugin to push BOM information to InvenTree.
 >     username=engineer
 >     password=partsonly
 >     server=https://demo.inventree.org
+>     # If required, set these to the inventree categories containing
+>     # PCBs and assemblies
+>     # pcb_category=Printed-Circuit Boards
+>     # pca_category=Assemblies
+>
+> The vendored packages must also be installed:
+>
+>     python -m venv env
+>     source env/bin/activate
+>     pip install vendoring
+>     vendoring sync
+>     deactivate
+>
